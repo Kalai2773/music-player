@@ -1,0 +1,139 @@
+.wrapper {
+    height: 100%;
+    overflow: hidden;
+}
+
+.wrapper-main {
+    position: relative;
+    width: 98%;
+    height: 100%;
+    background-color: var(--white-color);
+    border-radius: var(--border-radius);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.4s;
+}
+
+.wrapper-main--header {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 14px;
+}
+
+.header {
+    display: block;
+    width: 200px;
+    font-size: 2rem;
+}
+
+.wrapper-main--header-search {
+    width: 500px;
+    height: 36px;
+    margin-right: 20px;
+    transition: all 1s;
+}
+
+.wrapper-main-body {
+    height: 92%;
+}
+
+.wrapper-main-body--right {
+    height: 100%;   
+}
+
+.main-body--right-category {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 319px) {
+    .wrapper-main {
+        height: 100%;
+    }   
+
+    .wrapper-sidebar {
+        display: none !important;
+    }
+
+    .wrapper-main--header {
+        justify-content: center;
+        padding-left: 0;
+    }
+
+    .wrapper-main--header-search {
+        width: 70%;
+        margin-left: 20px;
+    }
+
+    .header {
+        display: none;
+    } 
+}
+
+@media (min-width: 320px) and (max-width: 399px) {
+    .wrapper-main {
+        height: 100%;
+    }
+
+    .wrapper-sidebar {
+        display: none !important;
+    }
+
+    .wrapper-main--header {
+        justify-content: center;
+        padding-left: 0;
+    }
+
+    .wrapper-main--header-search {
+        width: 70%;
+        margin-left: 20px;
+        margin-bottom: 10px;
+    }
+
+    .header {
+        display: none;
+    } 
+}
+
+@media (min-width: 400px) and (max-width: 739px) {
+    .wrapper {
+        height: unset;
+    }
+
+    .wrapper-main {
+        height: 100%;
+    }
+
+    .wrapper-sidebar {
+        display: none !important;
+    }
+
+    .wrapper-main--header {
+        justify-content: center;
+        padding-left: 0;
+    }
+
+    .wrapper-main--header-search {
+        width: 80%;
+        margin-left: 20px;
+        margin-bottom: 10px;
+    }
+    
+    .header {
+        display: none;
+    } 
+}
+
+@media (min-width: 740px) and (max-width: 1023px) {
+    .header {
+        font-size: 1.8rem;
+    }
+
+    .wrapper-main--header-search {
+        height: 30px;
+    }
+}

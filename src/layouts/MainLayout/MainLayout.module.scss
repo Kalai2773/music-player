@@ -1,0 +1,392 @@
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    background-color: #3B3C60;
+    overflow: hidden;
+}
+
+.wrapper-player {
+    display: none;
+    position: absolute;
+    top: -6%;
+    left: -42%;
+    width: 30%;
+    height: 100vh;
+    overflow: hidden;
+    animation-name: appear;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes appear {
+    from {
+        width: 0px;
+        opacity: 0;     
+        margin-left: 40%;
+    }
+    to {
+        margin-left: 0;
+        width: 400px;
+        opacity: 1;   
+        transform: translateX(-30px);
+    }
+}
+
+@keyframes hidden {
+    from {
+        width: 400px;
+        opacity: 1;     
+        margin-left: 0;
+    }
+    to {
+        margin-left: 40%;
+        width: 0px;
+        opacity: 0   
+    }
+}
+
+.wrapper-main {
+    position: relative;
+    width: 98%;
+    height: 100%;
+    background-color: var(--white-color);
+    border-radius: var(--border-radius);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.4s;
+}
+
+.wrapper-main--header {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 14px;
+}
+
+.header {
+    display: block;
+    width: 140px;
+    font-size: 2rem;
+}
+
+.wrapper-main--header-search {
+    width: 500px;
+    height: 36px;
+    margin-right: 20px;
+    transition: all 1s;
+}
+
+.wrapper-main-body {
+    height: 92%;
+}
+
+.wrapper-main-body--left {
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.wrapper-main-body--right {
+    height: 100%;  
+}
+
+.main-body--right-header {
+    display: block;
+    width: 70%;
+    margin: 10px 0;
+    margin-left: 6px;
+}
+
+.main-body--right-category {
+    max-height: 286px;
+    margin: 0 5px;
+    overflow: hidden;
+}
+
+.wrapper-main-body--right-header {
+    display: flex;
+    align-items: center;
+}
+
+.expand {
+    display: block;
+    text-decoration: none;
+    color: #3c3abe;
+    transition: all 0.2s;
+
+    &:hover {
+        cursor: pointer;
+        opacity: 0.8;
+    }
+}
+
+.slide-wrapper {
+    width: 100%;
+    height: 310px;
+    // height: 46%;
+    display: flex;
+    justify-content: center;
+}
+
+.slide {
+    width: 67%;
+    overflow: hidden;
+}
+
+.wrapper-music--list {
+    width: 100%;
+    height: 54%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.wrapper-music--list-header {
+    width: 100%;
+    display: block;
+    margin: 16px 0 16px 14px;
+    font-size: 2rem;
+}
+
+.wrapper-music--list-tracks {
+    padding-left: 14px;
+}
+
+@media (max-width: 319px) {
+    .wrapper {
+        height: 100vh;
+    }
+
+    .wrapper-main {
+        height: 100%;
+    }
+
+    .wrapper-sidebar {
+        display: none !important;
+    }
+
+    .wrapper-main--header {
+        justify-content: center;
+        padding-left: 0;
+    }
+
+    .wrapper-main--header-search {
+        width: 70%;
+        margin-left: 20px;
+    }
+
+    .header {
+        display: none;
+    } 
+
+    .burger-btn {
+        display: block;
+    }
+
+    .slide-wrapper {
+        height: 22%;
+    }
+
+    .wrapper-music--list-header {
+        font-size: 1.2rem;
+        margin: 6px 0 6px 12px;
+    }
+
+    .wrapper-music--list {
+        height: 68%;
+    }
+
+    .wrapper-music--list-tracks {
+        padding-left: 0;
+    }
+
+    .wrapper-player {
+        display: none;
+    }
+
+    .main-body--right-header {
+        font-size: 1.2rem;
+    }
+
+    .display-none {
+        display: none;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 399px) {
+    .wrapper {
+        height: 100vh;
+    }
+
+    .wrapper-main {
+        height: 100%;
+    }
+
+    .wrapper-main {
+        height: 100%;
+    }
+
+    .wrapper-sidebar {
+        display: none !important;
+    }
+
+    .wrapper-main--header {
+        justify-content: center;
+        padding-left: 0;
+    }
+
+    .burger-btn {
+        display: block;
+    }
+
+    .header {
+        display: none;
+    } 
+
+    .wrapper-main--header-search {
+        width: 80%;
+        margin-bottom: 10px;
+        margin-left: 40px;
+    }
+
+    .slide-wrapper {
+        height: 33%;
+    }
+
+    .wrapper-music--list-header {
+        font-size: 1.2rem;
+    }
+
+    .wrapper-music--list-tracks {
+        padding-left: 0;
+    }
+
+    .wrapper-player {
+        display: none;
+    }
+
+    .main-body--right-header {
+        font-size: 1.2rem;
+    }
+
+    .display-none {
+        display: none;
+    }
+}
+
+@media (min-width: 400px) and (max-width: 739px) {
+    .wrapper {
+        height: 100vh;
+    }
+
+    .container {
+    }
+
+    .wrapper-main {
+        height: 100%;
+    }
+
+    .wrapper-main {
+        height: 100%;
+    }
+
+    .wrapper-sidebar {
+        display: none !important;
+    }
+
+    .wrapper-main--header {
+        height: 60px;
+        justify-content: center;
+        padding-left: 0;
+    }
+    
+    .burger-btn {
+        display: block;
+    }
+
+    .header {
+        display: none;
+    } 
+    
+    .wrapper-main--header-search {
+        width: 80%;
+        margin-bottom: 10px;
+        margin-left: 40px;
+    }
+    
+    .wrapper-music--list-header {
+        font-size: 1.4rem;
+    }
+
+    .slide-wrapper {
+        height: unset;
+    }
+
+    .wrapper-music--list-tracks {
+        max-height: 590px;
+        width: 100%;
+        padding-left: 0px;
+    }  
+
+    .wrapper-player {
+        display: none;
+    }
+
+    .main-body--right-header {
+        font-size: 1.4rem;
+    }
+
+    .expand {
+        font-size: 1rem;
+    }
+
+    .display-none {
+        display: none;
+    }
+}
+
+@media (min-width: 740px) and (max-width: 1023px) {
+    .wrapper-main {
+        height: 100%;
+    }
+
+    .header,
+    .wrapper-music--list-header {
+        font-size: 2rem;
+    }
+
+    .wrapper-main--header-search {
+        height: 30px;
+    }
+
+    .wrapper-music--list {
+        height: 80%;
+    }
+
+    .wrapper-music--list-tracks {
+        max-height: 450px;
+    }
+
+    .wrapper-player {
+        display: none;
+    }
+
+    .slide-wrapper {
+        height: 17%;
+    }
+
+    .main-body--right-header {
+        font-size: 1.6rem;
+    }
+
+    .main-body--right-category {
+        max-height: 330px;
+    }
+
+    .expand {
+        font-size: 1rem;
+    }
+}
